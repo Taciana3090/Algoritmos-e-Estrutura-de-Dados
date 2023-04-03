@@ -1,0 +1,154 @@
+﻿RESPOSTAS DAS ATIVIDADES DA PRIMEIRA SEMANA
+
+
+Q1) Hello world
+//#include <stdio.h>
+int main() 
+{
+    
+    char s[100];
+    scanf("%[^\n]%*c", &s);
+    printf("Hello, World!\n");
+    printf("%s", s);
+    return 0;
+}
+
+
+_______________________________________________________________________________________________
+
+
+Q2) Playing With Characters
+//#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define MAX_LEN 100
+
+
+int main() 
+{
+    char ch, s[MAX_LEN], sen[MAX_LEN];
+    scanf("%c", &ch); 
+    printf("%c\n", ch);
+    
+    scanf("%s", s);
+    printf("%s\n", s);
+    scanf("\n");
+    
+    scanf("%[^\n]%*c]", sen);
+    printf("%s\n", sen);
+    
+    return 0;
+}
+
+
+
+
+_______________________________________________________________________________________________
+
+
+Q3) Sum and difference of two numbers 
+//#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int a,b;
+    float c,d;
+
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf("%d %d\n", a + b, a - b);
+    
+    scanf("%f", &c);
+    scanf("%f", &d);
+    printf("%.1f %.1f", c + d, c - d);
+        
+    return 0;
+}
+_______________________________________________________________________________________________
+
+
+Q4) Functions in C
+//#include <stdio.h>
+/*
+Add `int max_of_four(int a, int b, int c, int d)` here.
+*/
+
+
+int max_of_four(int a, int b, int c, int d) {
+    int ans;
+    a = a > b ? a : b;
+    c = c > d ? c : d;
+    ans = a > c ? a : c;
+    return ans;
+}
+
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
+
+
+_______________________________________________________________________________________________
+
+
+Q5) Pointers in C
+//#include <stdio.h>
+
+
+void update(int *a,int *b) {
+    // Complete this function    
+    int t = *a;
+    *a = *a + *b;
+    *b = t > *b ? t - *b : *b - t;
+}
+
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+
+    return 0;
+}
+
+
+_______________________________________________________________________________________________
+
+
+Q6) 1D arrays in C
+// #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+              int n,sum=0;
+    scanf("%d",&n);
+      int *val = malloc(n*sizeof(int));
+      for(int i=0;i<n;i++)
+    {
+      scanf("%d",&val[i]);
+      sum+=val[i];
+    }
+      printf("%i",sum);
+      free(val);
+
+
+     return 0;
+}

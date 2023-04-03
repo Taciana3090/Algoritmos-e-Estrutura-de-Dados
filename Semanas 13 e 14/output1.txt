@@ -1,0 +1,3 @@
+preOrdem: 1 0 3 2 4
+inOrdem: 0 1 2 3 4
+posOrdem: 0 2 4 3 1
